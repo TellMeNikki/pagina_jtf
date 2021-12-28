@@ -3,11 +3,14 @@ $(document).ready(function(){
     
     $('#gifi').hide();
     $('#textloading').html('click to start');
+    $( "#primera_pantalla" ).hide();
+    $( "#todo_lo_demas" ).show();
     
 
     $( "#titulo_neon" ).on('click', 
         function() {
             $( "#primera_pantalla" ).hide();
+            $( "#todo_lo_demas" ).show();
         
         }
     );
@@ -28,26 +31,26 @@ $(document).ready(function(){
         }
     );
 
-    $( "#vision" ).hover( 
+    $( "#vision" ).on('click', 
         function() {
         $( "#visiontexto" ).toggle();
         }
     );
 
-    $( "#mision" ).hover( 
+    $( "#mision" ).on('click', 
         function() {
         $( "#misiontexto" ).toggle();
         }
     );
 
 
-    $( "#valores" ).hover( 
+    $( "#valores" ).on('click', 
         function() {
         $( "#valorestexto" ).toggle();
         }
     );
 
-    $( "#objestrategicos" ).hover( 
+    $( "#objestrategicos" ).on('click', 
         function() {
         $( "#objestrategicostexto" ).toggle();
         }
@@ -61,11 +64,7 @@ $(document).ready(function(){
 
     
 
-    $('#botonenviar').on('click',function(evento){
-        evento.preventDefault();
-
-        $(".toast").toast("show");
-    });
+    
 
             
 })
